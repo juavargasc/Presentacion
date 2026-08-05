@@ -1,1 +1,54 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='stylesheet' href='styles.css'><title>Hola tías</title></head><body><div class='hero'><div class='overlay'><h1>Hola tías...</h1><h2>¡Sorpresa! ✨</h2><p>Queremos compartir con ustedes una noticia muy especial.</p><a href='#v'>Ver nuestra sorpresa</a></div></div><section id='v'><video controls playsinline src='video.mp4'></video><p class='msg'>Nuestro mayor regalo llegará en diciembre de 2026.<br>Con cariño,<br>Julián y Erika ❤️</p></section></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hola tías</title>
+</head>
+<body>
+  <div id="name-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-icon">✨</div>
+      <h2 id="modal-title">Un nuevo emprendimiento</h2>
+      <p class="modal-subtitle">Antes de empezar, cuéntanos tu nombre</p>
+      <form id="name-form">
+        <label for="name-input" class="visually-hidden">Tu primer nombre</label>
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Tu primer nombre"
+          autocomplete="given-name"
+          required
+          maxlength="30"
+        >
+        <button type="submit" id="name-submit">Continuar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="overlay" aria-live="polite">
+      <h1 id="greeting">Hola tías...</h1>
+      <h2>¡Sorpresa! ✨</h2>
+      <p>Queremos compartir contigo una noticia muy especial.</p>
+      <button type="button" id="surprise-btn">Ver nuestra sorpresa</button>
+    </div>
+  </div>
+
+  <section id="video-section" class="video-section hidden" aria-hidden="true">
+    <video id="surprise-video" controls playsinline src="video.mp4"></video>
+    <p class="msg">
+      Nuestro mayor regalo llegará en diciembre de 2026.<br>
+      Con cariño,<br>
+      Julián y Erika ❤️
+    </p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
